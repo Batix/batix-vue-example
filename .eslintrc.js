@@ -1,14 +1,20 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    node: true,
+    jquery: true,
+    es6: true
   },
-  extends: ["plugin:vue/essential", "eslint:recommended", "@vue/prettier"],
+  extends: ["plugin:vue/essential", "plugin:vue/recommended", "eslint:recommended"],
   parserOptions: {
     parser: "babel-eslint"
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    'vue/max-attributes-per-line': 'off',
+    'vue/html-self-closing': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+    'vue/multiline-html-element-content-newline': 'off',
+    'vue/html-indent': ["warn", 2, {}],
+    'no-unused-vars': 'warn',
   }
 };
