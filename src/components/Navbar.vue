@@ -1,9 +1,9 @@
 <template>
-  <nav class="navbar navbar-light bg-info">
+  <nav class="navbar navbar-light navbar-gray">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <router-link class="navbar-brand" :to="{name: 'Home'}">
-          <i class="fab fa-old-republic fa-2x"></i>
+          <img src="../assets/bx.png" height="40" class="d-inline-block align-top" alt />
         </router-link>
         <button
           class="navbar-toggler"
@@ -30,9 +30,9 @@
             >Prod. Mengen</router-link>
             <router-link
               class="nav-item nav-link"
-              :class="{ 'active': $route.name === 'Maschienen'}"
+              :class="{ 'active': $route.name === 'Maschinen'}"
               :to="{ name: 'Maschienen'}"
-            >Maschienen</router-link>
+            >Maschinen</router-link>
           </div>
         </div>
       </nav>
@@ -47,4 +47,11 @@ export default {
 </script>
 
 <style>
+.navbar-gray {
+    background-color: #ddd;
+}
+
+.navbar-brand {
+    padding: 0px !important;
+}
 </style>

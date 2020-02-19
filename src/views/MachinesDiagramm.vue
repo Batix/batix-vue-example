@@ -2,7 +2,7 @@
   <div>
     <div class="row mt-5">
       <div class="col-xl-6">
-        <h1 class="display-4">Maschienen</h1>
+        <h1 class="display-4">Maschinen</h1>
       </div>
     </div>
     <div class="row">
