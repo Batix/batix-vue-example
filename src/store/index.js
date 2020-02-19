@@ -1,9 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
-import Machines from "@/mock/machines";
-
-
 import "@/extensions/DateExtension";
 import _ from 'lodash';
 
@@ -11,11 +8,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    machines: Machines,
+    machines: [],
     machinesData: null,
     von: new Date(new Date() - 864000000),
     bis: new Date(),
-    filteredMachines: Machines,
+    filteredMachines: [],
   },
   mutations: {
     setMachines(state, machines) {

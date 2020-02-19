@@ -2,6 +2,8 @@ import store from "@/store";
 
 import MachinesDataMock from "@/mock/machinesData";
 
+import Api from "@/Api";
+
 export default {
     store,
     data() {
@@ -72,6 +74,9 @@ export default {
         },
         bisDate() {
             this.loadMaschinesData(true);
+        },
+        machines() {
+            this.loadMaschinesData(true);
         }
     },
     mounted() {
@@ -79,13 +84,25 @@ export default {
     },
     methods: {
         loadMachineData(machine) {
-            let data = MachinesDataMock.createMachinesData(
-                this.vonDate,
-                this.bisDate,
-                machine
-            );
+            if (window.useApi) {
+                Api.get("machines_data/", {
+                    params: {
+                        machine: machine.id,
+                        von: this.von,
+                        bis: this.bis
+                    }
+                }).then(response => {
+                    this.$store.commit("setMachinesData", [machine, response.data]);
+                })
+            } else {
+                let data = MachinesDataMock.createMachinesData(
+                    this.vonDate,
+                    this.bisDate,
+                    machine
+                );
 
-            this.$store.commit("setMachinesData", [machine, data]);
+                this.$store.commit("setMachinesData", [machine, data]);
+            }
         },
         loadMaschinesData(override) {
             if (!this.machinesData || override)

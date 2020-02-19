@@ -19,7 +19,7 @@
       </div>
       <div class="col-xl-10 p-5">
         <doughnut-chart
-          v-if="geladen"
+          v-if="machines"
           :chart-data="chartData"
           :options="{responsive: true, maintainAspectRatio: false, legend: { display: false }}"
         ></doughnut-chart>

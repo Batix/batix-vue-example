@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="col-xl-10 p-5">
-        <line-chart v-if="geladen" :chart-data="chartData" :options="chartOptions"></line-chart>
+        <line-chart v-if="machinesData" :chart-data="chartData" :options="chartOptions"></line-chart>
       </div>
     </div>
   </div>
