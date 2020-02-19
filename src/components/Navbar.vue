@@ -2,7 +2,9 @@
   <nav class="navbar navbar-light bg-info">
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <router-link class="navbar-brand" :to="{name: 'Home'}">Home</router-link>
+        <router-link class="navbar-brand" :to="{name: 'Home'}">
+          <i class="fab fa-old-republic fa-2x"></i>
+        </router-link>
         <button
           class="navbar-toggler"
           type="button"
