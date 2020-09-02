@@ -27,7 +27,7 @@
     "@vue/cli-service": "^4.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
-    "bestzip": "^2.1.5",
+    "bestzip": "^2.1.7",
     "bootstrap": "^4.4.1",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
